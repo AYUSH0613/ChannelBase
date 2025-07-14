@@ -20,19 +20,15 @@
 ## 📁 Directory Overview
 
 project-root/
-│
-├── controllers/ # Business logic
-├── routes/ # Express routes
-├── models/ # Mongoose models
-├── middlewares/ # Custom middleware (auth, uploads)
-├── utils/ # Reusable helpers
-├── public/ # Static & temp upload files
-├── app.js # Express config
-└── index.js # Server entry point
-
-yaml
-Copy
-Edit
+│                                              
+├── controllers/ # Business logic      
+├── routes/ # Express routes          
+├── models/ # Mongoose models               
+├── middlewares/ # Custom middleware (auth, uploads)                    
+├── utils/ # Reusable helpers                  
+├── public/ # Static & temp upload files                
+├── app.js # Express config                        
+└── index.js # Server entry point                        
 
 ---
 
@@ -43,7 +39,7 @@ Edit
 - MongoDB URI
 - Cloudinary account
 
-### Installation
+## Installation
 
 ```bash
 git clone https://github.com/yourusername/ChannelBase.git
@@ -52,10 +48,11 @@ npm install
 cp .env.example .env
 # Edit .env with your credentials
 npm run dev
-🔐 .env Example
-env
-Copy
-Edit
+```
+
+## 🔐 .env Example
+
+```bash
 PORT=8000
 MONGODB_URI=mongodb+srv://...
 DB_NAME=channelbase
@@ -65,38 +62,49 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEYS=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 CORS_ORIGIN=http://localhost:3000
-🧪 API Routes
-Auth
-POST /api/v1/users/register
+```
 
-POST /api/v1/users/login
 
-POST /api/v1/users/logout
+## 🧪 API Routes
 
-POST /api/v1/users/refresh-token
+### Auth
 
-User
-GET /api/v1/users/current-user
 
-PATCH /api/v1/users/update-account
 
-PATCH /api/v1/users/avatar
+- #### ` POST /api/v1/users/register`
 
-PATCH /api/v1/users/cover-image
+- #### ` POST /api/v1/users/login`
 
-GET /api/v1/users/c/:username
+- #### ` POST /api/v1/users/logout`
 
-GET /api/v1/users/history
+- #### ` POST /api/v1/users/refresh-token`
 
-🧱 Tech Stack
-Node.js + Express
+### User
 
-MongoDB + Mongoose
+- #### ` GET /api/v1/users/current-user`
 
-JWT for Auth
+ - #### ` PATCH /api/v1/users/update-account`
 
-Cloudinary for Image Storage
+- #### ` PATCH /api/v1/users/avatar`
+  
+- #### ` PATCH /api/v1/users/cover-image`
 
-Multer for File Uploads
+- #### ` GET /api/v1/users/c/:username`
 
-Cookie-parser & CORS
+- #### ` GET /api/v1/users/history`
+
+
+
+## 🧱 Tech Stack
+
+- Node.js + Express
+
+- MongoDB + Mongoose
+
+- JWT for Auth
+
+- Cloudinary for Image Storage
+
+- Multer for File Uploads
+
+- Cookie-parser & CORS
